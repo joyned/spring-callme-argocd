@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-callme
+  labels:
+    app: spring-callme
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-callme
+  template:
+    metadata:
+      labels:
+        app: spring-callme
+    spec:
+      containers:
+        - name: spring-callme
+          image: joyned/spring-callme
+          ports:
+            - containerPort: 8081
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-callme
+spec:
+  selector:
+    app: spring-callme
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8081
+      targetPort: 8081
