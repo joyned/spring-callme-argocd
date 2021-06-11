@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: spring-callme
-          image: joyned/spring-callme:latest
+          image: joyned/spring-callme
           ports:
             - containerPort: 8081
           imagePullPolicy: IfNotPresent
