@@ -18,4 +18,4 @@ spec:
         - name: spring-callme
           image: joyned/spring-callme:0.1
           ports:
-            - containerPort: 8081
+            - containerPort: 8082
