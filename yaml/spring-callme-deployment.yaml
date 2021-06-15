@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: spring-callme
-          image: joyned/spring-callme:0.2
+          image: joyned/spring-callme:0.1
           ports:
             - containerPort: 8082
